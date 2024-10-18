@@ -10,7 +10,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-internal interface GithubDataRepository{
+internal interface ConfigRepository {
     @Singleton
     @Binds
     fun binds(impl: YourConfig): Config

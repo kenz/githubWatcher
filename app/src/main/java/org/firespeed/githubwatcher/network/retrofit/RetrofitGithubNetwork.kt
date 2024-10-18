@@ -53,7 +53,7 @@ internal class RetrofitGithubNetwork @Inject constructor(
             .client(OkHttpClient.Builder()
                 .addInterceptor {
                     it.proceed(
-                        it.request().newBuilder().header("Authorization", config.apiToken).build()
+                        it.request().newBuilder().header("Authorization", config.apiToken()).build()
                     )
                 }
                 .build())
