@@ -21,7 +21,6 @@ Open Repository page in Github that tapped repository on previous screen.
 │       ├── androidTest not implemented yet.  
 │       ├── main 
 │       │   ├── java
-│       │   │   ├── config should add Config.kt see #introduce
 │       │   │   ├── data define model layer.
 │       │   │   │   ├── di Inject repository.
 │       │   │   │   ├── model Define data class.
@@ -39,7 +38,7 @@ Open Repository page in Github that tapped repository on previous screen.
 └── doc for documents
 ```
 # Introduce
-First of all should create `Config.kt` to ./app/src/main/java/org/firespeed/githubwatcher/config
+First of all should add row API_TOKEN = "<YOUR_GITHUB_API_TOKEN>" to `local.properties`.
 
 ```sh
 echo 'package org.firespeed.githubwatcher.config\n\nconst val API_TOKEN = API_TOKEN = "<YOUR_GITHUB_TOKEN>' > ./app/src/main/java/org/firespeed/githubwatcher/config/config.demo

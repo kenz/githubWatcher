@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.androidApplication)
@@ -22,6 +25,11 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        val properties = Properties()
+        val propertiesFile = project.rootProject.file("local.properties")
+        properties.load(FileInputStream(propertiesFile))
+        buildConfigField("String", "API_TOKEN", "${properties["API_TOKEN"]}")
     }
 
     buildTypes {
