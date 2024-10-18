@@ -7,6 +7,7 @@ runs:
       with:
         distribution: 'temurin'
         java-version: '21'
+    - uses: gradle/actions/setup-gradle@v4
     - name: "Run test"
       shell: bash
       run: "gradlew test"
