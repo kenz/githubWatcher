@@ -1,0 +1,3 @@
+package org.firespeed.githubwatcher.config
+
+ const val API_TOKEN = API_TOKEN = "<YOUR_GITHUB_TOKEN>
