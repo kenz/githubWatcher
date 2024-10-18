@@ -9,7 +9,7 @@ import javax.inject.Singleton
 import okhttp3.Call
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
-import org.firespeed.githubwatcher.config.API_TOKEN
+import org.firespeed.githubwatcher.config.Config
 import org.firespeed.githubwatcher.data.NetworkDataSource
 import org.firespeed.githubwatcher.network.models.NetworkGithubUsers
 import org.firespeed.githubwatcher.network.models.NetworkGithubUserDetail
@@ -41,6 +41,7 @@ private interface NetworkDataSourceApi {
 
 @Singleton
 internal class RetrofitGithubNetwork @Inject constructor(
+    config: Config,
     networkJson: Json,
     okhttpCallFactory: dagger.Lazy<Call.Factory>,
 ) : NetworkDataSource {
@@ -52,7 +53,7 @@ internal class RetrofitGithubNetwork @Inject constructor(
             .client(OkHttpClient.Builder()
                 .addInterceptor {
                     it.proceed(
-                        it.request().newBuilder().header("Authorization", API_TOKEN).build()
+                        it.request().newBuilder().header("Authorization", config.apiToken).build()
                     )
                 }
                 .build())

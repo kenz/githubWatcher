@@ -39,7 +39,14 @@ Open Repository page in Github that tapped repository on previous screen.
 └── doc for documents
 ```
 # Introduce
-First of all should create `Config.kt` to ./app/src/main/java/org/firespeed/githubwatcher/config
+First of all should add `YourConfig.kt` to ./app/src/main/java/org/firespeed/githubwatcher/config
+And set your Github API Token.
+ex:
+```kotlin
+object TestConfig : Config {
+  override val API_TOKEN: String = "<YOUR_GITHUB_API_TOKEN>"
+}
+```
 
 ```sh
 echo 'package org.firespeed.githubwatcher.config\n\nconst val API_TOKEN = API_TOKEN = "<YOUR_GITHUB_TOKEN>' > ./app/src/main/java/org/firespeed/githubwatcher/config/config.demo

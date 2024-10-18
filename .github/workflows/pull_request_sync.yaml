@@ -14,5 +14,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Test
+      - name: Unit test
         uses: ./.github/workflows/actions/unit_test
