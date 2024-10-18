@@ -40,10 +40,6 @@ Open Repository page in Github that tapped repository on previous screen.
 # Introduce
 First of all should add row API_TOKEN = "<YOUR_GITHUB_API_TOKEN>" to `local.properties`.
 
-```sh
-echo 'package org.firespeed.githubwatcher.config\n\nconst val API_TOKEN = API_TOKEN = "<YOUR_GITHUB_TOKEN>' > ./app/src/main/java/org/firespeed/githubwatcher/config/config.demo
-```
-
 # LICENSE
 This repository is  distributed under the terms of the Apache License 2.0.
 See the [LICENSE](LICENSE).
